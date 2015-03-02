@@ -1,0 +1,126 @@
+/********************/
+/**** Tooltip v2 ****/
+/********************/
+
+.tooltip-v2 {
+  display: block;
+  visibility: hidden;
+  z-index: 1000;
+  
+  .tooltip-container {
+    position: relative;
+    left: -50%;
+    width: 1000px;
+    
+    &.purple {
+      .tooltip-content {
+        background-color: #611171;
+        color: #fff;
+        
+        &:after {
+          color: #611171;
+        }
+      }
+    }
+    
+    &.teal {
+      .tooltip-content {
+        background-color: #00abab;
+        color: #fff;
+        
+        &:after {
+          color: #00abab;
+        }
+      }
+    }
+    
+    &.orange {
+      .tooltip-content {
+        background-color: #f15d25;
+        color: #fff;
+        
+        &:after {
+          color: #f15d25;
+        }
+      }
+    }
+    
+    &.pink {
+      .tooltip-content {
+        background-color: #ed027e;
+        color: #fff;
+        
+        &:after {
+          color: #ed027e;
+        }
+      }
+    }
+    
+    &.green {
+      .tooltip-content {
+        background-color: #7bc557;
+        color: #fff;
+        
+        &:after {
+          color: #7bc557;
+        }
+      }
+    }
+  }
+  
+  &.top {
+    .tooltip-container {
+      bottom: 15px;
+    }
+    
+    .tooltip-content {
+      bottom: 0;
+      
+      &:after {
+        content: "\e608";
+        bottom: -10px;
+        color: #efeeea;
+      }
+    }
+  }
+  
+  &.bottom {
+    .tooltip-container {
+      top: 15px;
+    }
+    
+    .tooltip-content {
+      top: 0;
+      
+      &:after {
+        content: "\e609";
+        top: -10px;
+        color: #efeeea;
+      }
+    }
+  }
+  
+  .tooltip-content {
+    position: absolute;
+    padding: 10px;
+    background-color: #efeeea;
+    font-size: 12px;
+    
+    &:after {
+      font-family: 'oi-arrows';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: inline-block;
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      left: 0;
+    }
+  } 
+}
