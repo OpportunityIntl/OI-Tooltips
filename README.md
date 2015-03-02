@@ -1,6 +1,28 @@
 # OI-Tooltips
 Experimental tooltip solution that uses absolute positioning to position tooltip relative to the document.
 
+###Usage
+
+```HTML
+<head>
+  <link rel="stylesheet" href="OI.tooltip.css">
+</head>
+<body>
+  <!-- The most basic configuration. Tooltip will be centered above the element at 100% max-width. -->
+  <span data-tooltip-v2="This is a tooltip!">Hover over me</span>
+  
+  <!-- An example with all the options. Tooltip will be purple, positioned below the element, at a max width of 300px. -->
+  <span data-tooltip-v2="Check out this tooltip! It's a pretty good one, if you ask me." data-tooltip-width="300" data-tooltip-style="purple" data-tooltip-position="bottom">Hover over me, too</span>
+  
+  <script src="OI.tooltip.min.js"></script>
+  <script>
+  $('[data-tooltip-v2']).each(function() {
+    var tooltip = new Tooltip($(this));
+  });
+  </script>
+</body>
+```
+
 ###Arguments
 |Argument|Type|Required?|Description|
 |----|---------|-----------|-------|
