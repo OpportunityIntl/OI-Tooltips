@@ -1,5 +1,5 @@
 # OI-Tooltips
-Experimental tooltip solution that uses absolute positioning to position tooltip relative to the document. Currently uses data-attribute `tooltip-v2` to avoid conflicting with existing tooltip solution.
+Experimental tooltip solution that uses absolute positioning to position tooltip relative to the document. Currently uses data-attribute `tooltip-v2` to avoid conflicting with existing tooltip solution. Should eventually be merged into Weavr.
 
 ###Usage
 
