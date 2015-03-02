@@ -20,13 +20,22 @@ module.exports = function(grunt) {
     },
     
     sass: {
-      production: {
+      dev: {
         options: {
-          sourcemap: 'none',
-          banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+          style: 'expanded'
         },
         files: {
           'dist/OI.tooltip.css' : 'build/OI.tooltip.scss'
+        }
+      },
+      production: {
+        options: {
+          sourcemap: 'none',
+          banner: '/*! <%= pkg.name %>/\nCompiled: <%= grunt.template.today("mm-dd-yyyy") %> */\n',
+          style: 'compressed'
+        },
+        files: {
+          'dist/OI.tooltip.min.css' : 'build/OI.tooltip.scss'
         }
       }
     },
