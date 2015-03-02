@@ -16,7 +16,9 @@ Experimental tooltip solution that uses absolute positioning to position tooltip
   
   <span class="tooltip-me">Don't forget about me!</span>
   
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="OI.tooltip.min.js"></script>
+  
   <script>
     // Instantiate all tooltips at once, using data-attributes or default options.
     $('[data-tooltip-v2']).each(function() {
