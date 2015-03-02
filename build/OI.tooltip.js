@@ -49,7 +49,6 @@ var Tooltip = function(elem, opts) {
     // check if options.max is a percentage or integer
     // if it's a percentage, set the max width to that percentage of the element
     var maxWidth = (typeof options.max === 'string' && options.max.slice(-1) === '%') ? (_this.elem.outerWidth() * (options.max.slice(0, -1) / 100)) : options.max;
-    console.log(maxWidth);
     if (naturalWidth > maxWidth) {
       tipContainer.css('width', maxWidth);
     } else {
