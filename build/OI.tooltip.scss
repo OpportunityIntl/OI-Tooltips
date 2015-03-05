@@ -66,6 +66,17 @@
         }
       }
     }
+    
+    &.offwhite {
+      .tooltip-content {
+        background-color: #efeeea;
+        color: #555;
+        
+        &:after {
+          color: #efeeea;
+        }
+      }
+    }
   }
   
   &.top {

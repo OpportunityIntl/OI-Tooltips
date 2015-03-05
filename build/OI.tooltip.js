@@ -10,7 +10,7 @@ var Tooltip = function(elem, opts) {
     position: _this.elem.data('tooltip-position') || 'top',
     message: _this.elem.data('tooltip-v2'),
     max: _this.elem.data('tooltip-width') || "100%",
-    style: _this.elem.data('tooltip-style')
+    style: _this.elem.data('tooltip-style') || 'purple'
   };
   
   // extend default options with 'opts' argument
