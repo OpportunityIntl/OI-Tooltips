@@ -46,6 +46,13 @@
 .tooltip-v2 .tooltip-container.green .tooltip-content:after {
   color: #7bc557;
 }
+.tooltip-v2 .tooltip-container.offwhite .tooltip-content {
+  background-color: #efeeea;
+  color: #555;
+}
+.tooltip-v2 .tooltip-container.offwhite .tooltip-content:after {
+  color: #efeeea;
+}
 .tooltip-v2.top .tooltip-container {
   bottom: 15px;
 }
