@@ -63,7 +63,7 @@ var Tooltip = function(elem, opts) {
   
   // method to show the tooltip
   this.show = function() {
-    _this.setPosition();
+    _this.setPosition().setWidth();
     _this.tip.stop().fadeIn(500);
     
     // return _this to allow for chaining
