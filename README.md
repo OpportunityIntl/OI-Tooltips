@@ -1,5 +1,5 @@
 # OI-Tooltips
-Experimental tooltip solution that uses absolute positioning to position tooltip relative to the document. Currently uses data-attribute `tooltip-v2` to avoid conflicting with existing tooltip solution. Should eventually be merged into Weavr.
+Experimental tooltip solution that uses absolute positioning to position tooltip relative to the document. Currently uses data-attribute `tooltip-v2` to avoid conflicting with existing tooltip solution, and requires OI-icon custom icon font for the "nub". Should eventually be merged into Weavr.
 
 ###Usage
 
@@ -49,5 +49,5 @@ Experimental tooltip solution that uses absolute positioning to position tooltip
 |position|string|"top"|Position of the tooltip relative to the element. Currently accepts 'top' and 'bottom'. Can be set via `data-tooltip-position` attribute.|
 |message|string|null|The content of the tooltip. Can be set via `data-tooltip-v2` attribute.|
 |max|integer or string|"100%"|The maximum width of the tooltip. If value is an integer, width will be set in pixels. If a string, it will expect a percentage. Can be set via `data-tooltip-width` attribute.|
-|style|string|null|Sets color of tooltip via CSS class. Current options are 'purple', 'teal', 'orange', 'pink', 'green', and 'offwhite'. Defaults to 'purple'. Can be set via `data-tooltip-style`. Additional styles could be configured via custom CSS.|
+|style|string|'purple'|Sets color of tooltip via CSS class. Current options are 'purple', 'teal', 'orange', 'pink', 'green', and 'offwhite'. Can be set via `data-tooltip-style`. Additional styles could be configured via custom CSS.|
 |zindex|integer|null|The z-index of the tooltip. If `null`, will fallback to z-index specified in CSS.|
