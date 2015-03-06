@@ -22,6 +22,9 @@ var Tooltip = function(elem, opts) {
   // append tooltip to body
   $('body').append(this.tip);
   
+  var tipContent = _this.tip.find('.tooltip-content');
+  var tipContainer = _this.tip.find('.tooltip-container');
+  
   // method to position the tooltip
   this.setPosition = function() {
     var elemOffsetX = elem.offset().left;
@@ -41,9 +44,11 @@ var Tooltip = function(elem, opts) {
   
   // method to set the width of the tooltip
   this.setWidth = function() {
+    // make tooltip 'visible' to browser so we can get the content width
     _this.tip.css({'display': 'block', 'visibility': 'hidden'});
-    var tipContent = _this.tip.find('.tooltip-content');
-    var tipContainer = _this.tip.find('.tooltip-container');
+    
+    // reset tooltip width so we can get the natural width of the content
+    tipContainer.css('width', '');
     var naturalWidth = tipContent.outerWidth();
     
     // check if options.max is a percentage or integer
@@ -55,6 +60,7 @@ var Tooltip = function(elem, opts) {
       tipContainer.css('width', naturalWidth);
     }
     
+    // hide the tooltip again
     _this.tip.css({'display': 'none', 'visibility': 'visible'});
     
     // return _this to allow for chaining
@@ -78,10 +84,7 @@ var Tooltip = function(elem, opts) {
     return _this;
   };
   
-  // set position and width, and attach event handlers when
-  // the tooltip object is instantiated
-  this.setPosition();
-  this.setWidth();
+  // attach event handlers when the tooltip object is instantiated
   this.elem.hover(function() {
     _this.show();
   }, function() {
