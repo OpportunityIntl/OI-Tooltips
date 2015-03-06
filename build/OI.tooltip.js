@@ -10,7 +10,8 @@ var Tooltip = function(elem, opts) {
     position: _this.elem.data('tooltip-position') || 'top',
     message: _this.elem.data('tooltip-v2'),
     max: _this.elem.data('tooltip-width') || "100%",
-    style: _this.elem.data('tooltip-style') || 'purple'
+    style: _this.elem.data('tooltip-style') || 'purple',
+    zindex: _this.elem.data('tooltip-zindex') || null
   };
   
   // extend default options with 'opts' argument
@@ -18,6 +19,10 @@ var Tooltip = function(elem, opts) {
   
   // create jQuery object of tooltip
   this.tip = $('<div class="tooltip-v2 ' + options.position + '"><div class="tooltip-container ' + options.style + '"><div class="tooltip-content">' + options.message + '</div></div></div>');
+  
+  if (options.zindex) {
+    _this.tip.css('z-index', options.zindex);
+  }
   
   // append tooltip to body
   $('body').append(this.tip);
