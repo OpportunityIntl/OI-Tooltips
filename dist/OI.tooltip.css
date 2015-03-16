@@ -2,8 +2,7 @@
 /**** Tooltip v2 ****/
 /********************/
 .tooltip-v2 {
-  display: block;
-  visibility: hidden;
+  display: none;
   z-index: 1;
 }
 .tooltip-v2 .tooltip-container {
